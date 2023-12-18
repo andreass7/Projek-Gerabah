@@ -33,14 +33,14 @@
                         //matriks
 
                         if (isset($_GET['btnhitung'])) {
-                            $GypsumCasting = $_GET['GypsumCasting'];
-                            $Rofing = $_GET['Rofing'];
-                            $SemenPutih = $_GET['SemenPutih'];
+                            $semen = $_GET['semen'];
+                            $waktu = $_GET['waktu'];
+                            $cat = $_GET['cat'];
 
                             $matriks = [
-                                [1.5, 2.5, 0.75, $GypsumCasting],
-                                [2, 3, 1.5, $Rofing],
-                                [0.5, 1, 1, $SemenPutih]
+                                [1, 2, 0.5, $semen],
+                                [5, 6, 4, $waktu],
+                                [1.5, 0, 1, $cat]
                             ];
                             echo "Matriks Awal";
                             tabel($matriks);
@@ -116,15 +116,15 @@
                         // //Jika Menggunakan Perulangan
 
                         // if (isset($_GET['btnhitung'])) {
-                        //     $GypsumCasting = $_GET['GypsumCasting'];
-                        //     $Rofing = $_GET['Rofing'];
-                        //     $SemenPutih = $_GET['SemenPutih'];
+                        //     $semen = $_GET['semen'];
+                        //     $waktu = $_GET['waktu'];
+                        //     $cat = $_GET['cat'];
 
                         //     $matriks =
                         //         array(
-                        //             array(1.5, 2.5, 0.75, $GypsumCasting),
-                        //             array(2, 3, 1.5, $Rofing),
-                        //             array(0.5, 1, 1, $SemenPutih)
+                        //             array(1.5, 2.5, 0.75, $semen),
+                        //             array(2, 3, 1.5, $waktu),
+                        //             array(0.5, 1, 1, $cat)
                         //         );
                         //     tampilkanMatrik($matriks);
                         // }
