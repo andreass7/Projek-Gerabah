@@ -47,16 +47,21 @@
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="index.php">Home</a></li>
-                    <li><a class="nav-link scrollto" href="petunjuk.php">Petunjuk</a></li>
-                    <li><a class="nav-link scrollto" href="about.php">About</a></li>
-                    <li><a class="nav-link scrollto" href="produk.php">Produk</a></li>
-                    <li><a class="nav-link scrollto " href="estimasi.php">Estimasi</a></li>
-                    <li><a class="nav-link scrollto" href="team.php">Pengembang</a></li>
+                    <li><a class="<?php echo isActive('index.php'); ?>" href="index.php">Home</a></li>
+                    <li><a class="<?php echo isActive('petunjuk.php'); ?>" href="petunjuk.php">Petunjuk</a></li>
+                    <li><a class="<?php echo isActive('about.php'); ?>" href="about.php">About</a></li>
+                    <li><a class="<?php echo isActive('produk.php'); ?>" href="produk.php">Produk</a></li>
+                    <li><a class="<?php echo isActive('estimasi.php'); ?> " href="estimasi.php">Estimasi</a></li>
+                    <li><a class="<?php echo isActive('team.php'); ?>" href="team.php">Pengembang</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-
+            <?php
+            // Function to determine if a menu should be active
+            function isActive($page)
+            {
+                return (basename($_SERVER['PHP_SELF']) == $page) ? 'active' : '';
+            }
+            ?>
         </div>
     </header><!-- End Header -->
-    <main id="main">
